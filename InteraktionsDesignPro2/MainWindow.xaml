@@ -116,7 +116,7 @@
                 >
 
         </Button>
-        <Button Border CornerRadius="15" Content="Button" HorizontalAlignment="Left" Margin="366,277,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="366,277,0,0" VerticalAlignment="Top" Width="75"/>
         <!--<Button Style="{DynamicResource RoundCorner}" Content="Button" HorizontalAlignment="Left" Margin="329,388,0,0" VerticalAlignment="Top" Width="75"/>
         -->
     </Grid>
