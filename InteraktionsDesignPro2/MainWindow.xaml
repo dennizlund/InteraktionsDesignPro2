@@ -92,7 +92,7 @@
             </Label.Style>
         </Label>
 
-        <Button Content="Logga in" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="75" Height="25" Background="White" BorderThickness="1.7" BorderBrush="Black" FontWeight="Bold">
+        <Button Content="Logga in" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="75" Height="25" BorderThickness="1.7" BorderBrush="Black" FontWeight="Bold" Background="White" MouseDoubleClick="Button_MouseDoubleClick">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -100,8 +100,5 @@
             </Button.Resources>
         </Button>
 
-        
-        <!--<Button Style="{DynamicResource RoundCorner}" Content="Button" HorizontalAlignment="Left" Margin="329,388,0,0" VerticalAlignment="Top" Width="75"/>
-        -->
     </Grid>
 </Window>

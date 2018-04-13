@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace InteraktionsDesignPro2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Publisher.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Publisher : Window
     {
-        public MainWindow()
+        public Publisher()
         {
             InitializeComponent();
-        }
-
-        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            var newForm = new Publisher(); //create your new form.
-            newForm.Show(); //show the new form.
-            this.Close(); //only if you want to close the current form.
         }
     }
 }
