@@ -99,6 +99,7 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Image Source="loggo.png" HorizontalAlignment="Left" Height="50" Margin="479,15,0,0" VerticalAlignment="Top" Width="60"/>
 
     </Grid>
 </Window>
