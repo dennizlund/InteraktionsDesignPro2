@@ -8,6 +8,7 @@
         Title="Search" Height="450" Width="800">
 
 
+
     <Grid>
         <Grid.Resources>
             <ImageBrush x:Key="AddButtonImageBrush" ImageSource="notification.png" Stretch="Uniform">
@@ -23,9 +24,10 @@
         </Grid.Resources>
 
         <StackPanel Orientation="Horizontal">
+
             <Button Content="Publish" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
                 <Button.Resources>
-                    <Style TargetType="Border">
+                    <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
@@ -46,7 +48,51 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-        
+
+        <Rectangle RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" Height="312" VerticalAlignment="Top" Width="772" Margin="10,70,0,0"/>
+        <StackPanel HorizontalAlignment="Left" Height="310" Margin="12,72,0,0" VerticalAlignment="Top" Width="770">
+
+            <TextBox HorizontalAlignment="Left" Margin="50,0,0,0" Background="Transparent" TextWrapping="Wrap" Text="Din sökning" FontSize="36" BorderThickness="0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,170,0" Height="60" >
+
+                <Button Content="Top" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Senaste" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Publishers" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Artiklar" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox HorizontalAlignment="Left" Margin="50,0,0,0"  Background="Transparent" TextWrapping="Wrap" Text="Filter" FontSize="36" BorderThickness="0" Height="176" Width="319"/>
+                <TextBox HorizontalAlignment="Left" Margin="50,0,0,0"  Background="Transparent" TextWrapping="Wrap" Text="Träffar" FontSize="36" BorderThickness="0" Height="176" Width="319"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- HÄR BÖRJAR ALLT INOM REKTANGELN -->
 
     </Grid>
 </Window>
