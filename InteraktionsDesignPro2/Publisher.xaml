@@ -58,7 +58,7 @@
         
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-        <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" BorderThickness="2" FontSize="20"/>
+        <TextBox Name="SökTexten" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" BorderThickness="2" FontSize="20"/>
                 <Button Margin="10,0,0,0" HorizontalAlignment="Right" BorderThickness="0" FontWeight="Bold" Background="White" MouseDoubleClick="Control_OnMouseDoubleClick">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">

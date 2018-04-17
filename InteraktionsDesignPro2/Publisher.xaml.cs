@@ -38,7 +38,9 @@ namespace InteraktionsDesignPro2
         private void Control_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var newForm = new Search(); //create your new form.
+            newForm.SökText.Text = SökTexten.Text;
             newForm.Show(); //show the new form.
+
             this.Close(); //only if you want to close the current form.
         }
     }
