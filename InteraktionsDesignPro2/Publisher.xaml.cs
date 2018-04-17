@@ -22,6 +22,17 @@ namespace InteraktionsDesignPro2
         public Publisher()
         {
             InitializeComponent();
+
+            List<PostData> data = new List<PostData>();
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            listBox.ItemsSource = data;
         }
     }
 }

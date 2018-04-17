@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PostData.cs" />
     <Compile Include="Publisher.xaml.cs">
       <DependentUpon>Publisher.xaml</DependentUpon>
     </Compile>
