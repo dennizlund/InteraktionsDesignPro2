@@ -34,5 +34,12 @@ namespace InteraktionsDesignPro2
             data.Add(new PostData("H1", "Here"));
             listBox.ItemsSource = data;
         }
+
+        private void Control_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var newForm = new Search(); //create your new form.
+            newForm.Show(); //show the new form.
+            this.Close(); //only if you want to close the current form.
+        }
     }
 }
