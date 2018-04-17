@@ -27,7 +27,7 @@ namespace InteraktionsDesignPro2
 
         private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var newForm = new Search(); //create your new form.
+            var newForm = new Publisher(); //create your new form.
             newForm.Show(); //show the new form.
             this.Close(); //only if you want to close the current form.
         }

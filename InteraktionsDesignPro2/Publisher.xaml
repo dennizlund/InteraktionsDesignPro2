@@ -10,12 +10,20 @@
     <Window.Resources>
         <DataTemplate x:Key="ItemTemplate" >
             <Grid>
-                <WrapPanel>
-                    <Image Height="50" Width="50" Source="{Binding ImgSource}" >
-                    </Image>
-                    <Label Content="Title"></Label>
-                    <Label Content="Content"></Label>
-                </WrapPanel>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Height="50" Width="50" Source="{Binding ImgSource}" Grid.Column="0"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Title" FontSize="16" Grid.Row="0"></Label>
+                    <Label Content="Content is here, put what you want" Grid.Row="1"></Label>
+                </Grid>
             </Grid>
         </DataTemplate>
     </Window.Resources>

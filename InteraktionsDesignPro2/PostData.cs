@@ -17,7 +17,7 @@ namespace InteraktionsDesignPro2
         {
             Title = title;
             Content = content;
-            ImgSource = new BitmapImage();
+            ImgSource = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "..\\..\\loggo.png", UriKind.Absolute)); ;
         }
     }
 }
