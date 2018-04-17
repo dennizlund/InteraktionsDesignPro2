@@ -113,5 +113,16 @@
   <ItemGroup>
     <Resource Include="notification.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="buissnessAvatar.png" />
+    <Resource Include="curlyFemaleAvatar.png" />
+    <Resource Include="femaleAvatar.png" />
+    <Resource Include="glassesAvatar.png" />
+    <Resource Include="goateAvatar.png" />
+    <Resource Include="regularAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="settings.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
