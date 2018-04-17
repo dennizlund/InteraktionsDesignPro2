@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InteraktionsDesignPro2"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="Publisher" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="ItemTemplate" >
+            <Grid>
+                <WrapPanel>
+                    <Image Height="50" Width="50" Source="{Binding ImgSource}" >
+                    </Image>
+                    <Label Content="Title"></Label>
+                    <Label Content="Content"></Label>
+                </WrapPanel>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <ListBox x:Name="listBox" HorizontalAlignment="Center" Height="400" VerticalAlignment="Bottom" Width="350" ItemTemplate="{StaticResource ItemTemplate}">
+        </ListBox>
     </Grid>
 </Window>
