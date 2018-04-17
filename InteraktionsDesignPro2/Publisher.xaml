@@ -8,8 +8,31 @@
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="Publisher" Height="450" Width="800">
     <Window.Resources>
+
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate">
+            <Border Background="{TemplateBinding Background}" 
+                    x:Name="Bd" BorderBrush="Black"
+                    BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+
         <DataTemplate x:Key="ItemTemplate" >
             <Grid>
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="*" />
@@ -26,9 +49,58 @@
                 </Grid>
             </Grid>
         </DataTemplate>
+
+
+
     </Window.Resources>
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Center" Height="400" VerticalAlignment="Bottom" Width="350" ItemTemplate="{StaticResource ItemTemplate}">
-        </ListBox>
+        
+        
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+        <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" BorderThickness="2" FontSize="20"/>
+                <Button Margin="10,0,0,0" HorizontalAlignment="Right" BorderThickness="0" FontWeight="Bold" Background="White">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="magnifying.png"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <ListBox x:Name="listBox" BorderThickness="0" Height="250" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="350" ItemTemplate="{StaticResource ItemTemplate}"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button Content="Publish" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Notification" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Margin="430,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="settings.png"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
