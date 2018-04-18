@@ -33,7 +33,7 @@
         <Image Source="loggo.png" HorizontalAlignment="Left" Height="34" Margin="462,45,0,0" VerticalAlignment="Top" Width="45"/>
         <Rectangle x:Name="Frame1" RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="453" Margin="315,79,0,0"/>
         <Rectangle RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="238" Margin="27,79,0,0"/>
-        <TextBox x:Name="EnterText" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Margin="27,362,584,0" VerticalAlignment="Top" Width="181" Height="47" Text="Enter text:"/>
+        <TextBox x:Name="EnterText" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Margin="84,362,527,0" VerticalAlignment="Top" Width="181" Height="47" Text="Enter text:"/>
 
         <Button Margin="682,10,10,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White" Click="Button_Click">
             <Button.Resources>
@@ -51,6 +51,29 @@
         <Rectangle HorizontalAlignment="Left" Height="2" Margin="27,232,0,0" RadiusY="10" RadiusX="10" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" Width="238" RenderTransformOrigin="0.5,0.5"/>
         <Image Source="glassesAvatar.png" Margin="36,239,716,140" />
         <Image Source="AI.PNG" Margin="339,84,51,76" />
-        
+        <Label Content="Intressant artikel!! @Author" HorizontalAlignment="Left" Margin="81,98,0,0" VerticalAlignment="Top" Height="22" Width="170" FontSize="10"/>
+        <Label Content="Tack så mycket! @Jimmy" HorizontalAlignment="Left" Margin="107,143,0,0" VerticalAlignment="Top" Height="22" Width="170" FontSize="10"/>
+        <Label Content="Håller helt och hållet med :D" HorizontalAlignment="Left" Margin="107,188,0,0" VerticalAlignment="Top" Height="22" Width="170" FontSize="10"/>
+        <Label Content="I texten så skriver du följande&#xD;&#xA;&quot;One curious feature is the use&#xD;&#xA;of the word theme as in themes&#xD;&#xA;of expert systems.&quot; Hur menar&#xD;&#xA;du då? @Author" HorizontalAlignment="Left" Margin="81,248,0,0" VerticalAlignment="Top" Height="75" Width="155" FontSize="10"/>
+        <Image Source="glassesAvatar.png" Margin="25,362,727,17" RenderTransformOrigin="0.35,0.7" />
+        <Button Margin="107,10,585,0" VerticalAlignment="Top" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Image Height="25" Source="notificationbell.png"/>
+            </StackPanel>
+        </Button>
+        <TextBox x:Name="EnterText_Copy" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Margin="315,362,296,0" VerticalAlignment="Top" Width="181" Height="47" Text="Cite from text"/>
+        <Button Content="Publish" HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
     </Grid>
 </Window>
