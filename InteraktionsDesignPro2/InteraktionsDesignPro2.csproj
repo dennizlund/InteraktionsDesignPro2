@@ -128,5 +128,8 @@
   <ItemGroup>
     <Resource Include="magnifying.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="notificationbell.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -59,12 +59,15 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Content="Notification" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="25" Source="notificationbell.png"/>
+                </StackPanel>
             </Button>
 
             <Button Margin="430,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
