@@ -55,6 +55,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="PostData.cs" />
+    <Compile Include="Publish.xaml.cs">
+      <DependentUpon>Publish.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Publisher.xaml.cs">
       <DependentUpon>Publisher.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Publish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Publisher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AI.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="notificationbell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
