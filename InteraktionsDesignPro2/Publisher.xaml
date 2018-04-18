@@ -44,8 +44,8 @@
                         <RowDefinition Height="32"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Title" FontSize="16" Grid.Row="0"></Label>
-                    <Label Content="Content is here, put what you want" Grid.Row="1"></Label>
+                    <Label x:Name="ItemTitle" Content="Title" FontSize="16" Grid.Row="0"></Label>
+                    <Label x:Name="ItemContent" Content="Content is here, put what you want" Grid.Row="1"></Label>
                 </Grid>
             </Grid>
         </DataTemplate>
@@ -93,7 +93,13 @@
                     <Image Height="25" Source="notificationbell.png"/>
                 </StackPanel>
             </Button>
-
+            <Button Content="Username" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <Button Margin="430,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
