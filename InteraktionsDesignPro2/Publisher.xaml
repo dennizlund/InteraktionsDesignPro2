@@ -100,7 +100,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Margin="350,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Right"  Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button Margin="385,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Right"  Width="30" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
