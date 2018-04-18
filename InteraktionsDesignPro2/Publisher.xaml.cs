@@ -22,6 +22,26 @@ namespace InteraktionsDesignPro2
         public Publisher()
         {
             InitializeComponent();
+
+            List<PostData> data = new List<PostData>();
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            data.Add(new PostData("H1", "Here"));
+            listBox.ItemsSource = data;
+        }
+
+        private void Control_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var newForm = new Search(); //create your new form.
+            newForm.SökText.Text = SökTexten.Text;
+            newForm.Show(); //show the new form.
+
+            this.Close(); //only if you want to close the current form.
         }
     }
 }

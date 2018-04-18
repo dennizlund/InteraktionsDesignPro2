@@ -5,8 +5,102 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InteraktionsDesignPro2"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="Publisher" Height="450" Width="800">
+    <Window.Resources>
+
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate">
+            <Border Background="{TemplateBinding Background}" 
+                    x:Name="Bd" BorderBrush="Black"
+                    BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+
+        <DataTemplate x:Key="ItemTemplate" >
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Height="50" Width="50" Source="{Binding ImgSource}" Grid.Column="0"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Title" FontSize="16" Grid.Row="0"></Label>
+                    <Label Content="Content is here, put what you want" Grid.Row="1"></Label>
+                </Grid>
+            </Grid>
+        </DataTemplate>
+
+
+
+    </Window.Resources>
     <Grid>
         
+        
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+        <TextBox Name="SökTexten" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" BorderThickness="2" FontSize="20"/>
+                <Button Margin="10,0,0,0" HorizontalAlignment="Right" BorderThickness="0" FontWeight="Bold" Background="White" MouseDoubleClick="Control_OnMouseDoubleClick">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="magnifying.png"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <ListBox x:Name="listBox" BorderThickness="0" Height="250" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="350" ItemTemplate="{StaticResource ItemTemplate}"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button Content="Publish" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Notification" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Margin="430,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="settings.png"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

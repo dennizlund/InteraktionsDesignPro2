@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PostData.cs" />
     <Compile Include="Publisher.xaml.cs">
       <DependentUpon>Publisher.xaml</DependentUpon>
     </Compile>
@@ -119,6 +120,20 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="buissnessAvatar.png" />
+    <Resource Include="curlyFemaleAvatar.png" />
+    <Resource Include="femaleAvatar.png" />
+    <Resource Include="glassesAvatar.png" />
+    <Resource Include="goateAvatar.png" />
+    <Resource Include="regularAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="magnifying.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

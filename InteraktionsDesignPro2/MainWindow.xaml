@@ -52,7 +52,6 @@
 
     <Grid>
 
-
         <Label Content="Publisher" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36"/>
         <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Width="190"/>
         <PasswordBox Template="{StaticResource passwordbox}" HorizontalAlignment="Center" Margin="0,197,0,0" VerticalAlignment="Top" Width="190" />
