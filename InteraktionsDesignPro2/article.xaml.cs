@@ -17,12 +17,11 @@ namespace InteraktionsDesignPro2
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Article : Window
     {
-        public Window1()
+        public Article()
         {
             InitializeComponent();
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
