@@ -35,5 +35,22 @@
         <Rectangle RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="238" Margin="27,79,0,0"/>
         <TextBox x:Name="EnterText" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Margin="27,362,584,0" VerticalAlignment="Top" Width="181" Height="47" Text="Enter text:"/>
 
+        <Button Margin="682,10,10,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="settings.png"/>
+            </StackPanel>
+        </Button>
+        <Image Source="buissnessAvatar.png" Margin="36,89,716,290"/>
+        <Image Source="curlyFemaleAvatar.png" Margin="62,134,690,245" />
+        <Image Source="femaleAvatar.png" Margin="62,179,690,200"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="27,232,0,0" RadiusY="10" RadiusX="10" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" Width="238" RenderTransformOrigin="0.5,0.5"/>
+        <Image Source="glassesAvatar.png" Margin="36,239,716,140" />
+        <Image Source="AI.PNG" Margin="339,84,51,76" />
+        
     </Grid>
 </Window>

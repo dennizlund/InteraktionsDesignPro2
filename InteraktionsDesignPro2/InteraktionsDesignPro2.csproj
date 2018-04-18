@@ -135,5 +135,8 @@
   <ItemGroup>
     <Resource Include="magnifying.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AI.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
