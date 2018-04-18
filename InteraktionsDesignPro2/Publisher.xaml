@@ -93,14 +93,14 @@
                     <Image Height="25" Source="notificationbell.png"/>
                 </StackPanel>
             </Button>
-            <Button Content="Username" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button Content="User" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Margin="430,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button Margin="350,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Right"  Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
