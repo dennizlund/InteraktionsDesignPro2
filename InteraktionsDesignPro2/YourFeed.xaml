@@ -70,7 +70,7 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <ListBox x:Name="listBox" BorderThickness="0" Height="250" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="350" ItemTemplate="{StaticResource ItemTemplate}"/>
+            <ListBox x:Name="listBox" BorderThickness="0" Height="250" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="350" ItemTemplate="{StaticResource ItemTemplate}" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
         </StackPanel>
 
 
