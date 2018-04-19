@@ -17,9 +17,9 @@ namespace InteraktionsDesignPro2
     /// <summary>
     /// Interaction logic for Publisher.xaml
     /// </summary>
-    public partial class Publisher : Window
+    public partial class YourFeed : Window
     {
-        public Publisher()
+        public YourFeed()
         {
             InitializeComponent();
 
