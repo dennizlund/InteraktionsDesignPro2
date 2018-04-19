@@ -6,8 +6,50 @@
         xmlns:local="clr-namespace:InteraktionsDesignPro2"
         mc:Ignorable="d"
         Title="Publish" Height="450" Width="800">
+    <Window.Resources>
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+    </Window.Resources>
     <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="336,49,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Title" Content="Public article" HorizontalAlignment="Center" Margin="280,45,335,0" VerticalAlignment="Top" FontSize="18" Height="34" Width="177"/>
+        <Image Source="loggo.png" HorizontalAlignment="Left" Height="34" Margin="462,45,0,0" VerticalAlignment="Top" Width="45"/>
+        <Rectangle x:Name="Frame1" RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="453" Margin="315,79,0,0"/>
+
+        <Button Margin="682,10,10,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="settings.png"/>
+            </StackPanel>
+        </Button>
+        <Image Source="AI.PNG" Margin="339,84,51,76" />
+        <TextBox x:Name="postTilte" HorizontalAlignment="Left" Height="40" Margin="21,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" FontSize="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <TextBox x:Name="postContent" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Margin="21,124,0,49" Text="" Width="250"/>
+        <Button x:Name="btn_preview" Content="Preview" FontSize="20" HorizontalAlignment="Left" Margin="21,375,0,0" VerticalAlignment="Top" Width="100" Height="34"/>
+        <Button x:Name="btn_publish" Content="Publish" FontSize="20" HorizontalAlignment="Left" Margin="171,375,0,0" VerticalAlignment="Top"  Width="100" Height="34"/>
+        <Button x:Name="btn_browse" Content="Browse" FontSize="20" HorizontalAlignment="Left" Margin="542,375,0,0" VerticalAlignment="Top"  Width="100" Height="34"/>
+        <Button x:Name="btn_upload" Content="Upload" FontSize="20" HorizontalAlignment="Left" Margin="668,375,0,0" VerticalAlignment="Top"  Width="100" Height="34"/>
 
     </Grid>
 </Window>

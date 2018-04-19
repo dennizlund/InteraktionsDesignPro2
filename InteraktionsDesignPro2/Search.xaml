@@ -70,7 +70,15 @@
                 </StackPanel>
             </Button>
 
-            <Button Margin="430,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White" Click="Button_Click">
+            <Button Content="User" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Margin="320,20,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderThickness="0" FontWeight="Bold" Background="White" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -88,30 +96,30 @@
 
             <TextBox Name="SökText" HorizontalAlignment="Left" Margin="50,0,0,0" Background="Transparent" TextWrapping="Wrap" Text="Din sökning" FontSize="36" BorderThickness="0"/>
 
-            <StackPanel Orientation="Horizontal" Height="70" HorizontalAlignment="Left" Width="768">
+            <StackPanel Orientation="Horizontal" Height="30" HorizontalAlignment="Left" Width="768">
 
-                <Button Content="Top" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                <Button Content="Top" BorderThickness="0" Background="White" FontSize="20" Width="100">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Content="Senaste" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                <Button Content="Senaste" BorderThickness="0" Background="White" FontSize="20" Width="100">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Content="Publishers" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                <Button Content="Publishers" BorderThickness="0" Background="White" FontSize="20" Width="100">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Content="Artiklar" BorderThickness="0" Background="White" FontSize="26" Width="150">
+                <Button Content="Artiklar" BorderThickness="0" Background="White" FontSize="20" Width="100">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -128,7 +136,7 @@
             <StackPanel Orientation="Horizontal">
 
                 <StackPanel Orientation="Vertical" Width="150">
-                    <TextBox HorizontalAlignment="Center" Background="Transparent" TextWrapping="Wrap" Text="Populära publishers" FontSize="14" BorderThickness="0" FontWeight="Bold"/>
+                    <TextBox HorizontalAlignment="Center" Background="Transparent" TextWrapping="Wrap" Text="Populära publishers" FontSize="14" BorderThickness="0" FontWeight="Bold" Margin="0,0,10,10"/>
 
                     <Button BorderThickness="0" Background="{x:Null}">
                         <Button.Resources>
@@ -165,7 +173,17 @@
                             <TextBlock Margin="10,0,0,0" Width="100" Text="Pia Goeh"/>
                         </StackPanel>
                     </Button>
-
+                    <Button BorderThickness="0" Background="{x:Null}">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="glassesAvatar.png" Height="40" Width="40"/>
+                            <TextBlock Margin="10,0,0,0" Width="100" Text="Johan axe"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Width="299">
@@ -243,7 +261,7 @@
 
 
                     </ListBoxItem>
-                    <!--
+                    
                     <ListBoxItem BorderThickness="0">
                         <Button BorderThickness="0" Background="{x:Null}">
                             <Button.Resources>
@@ -261,6 +279,7 @@
 
                     </ListBoxItem>
 
+                    <!--
                     <ListBoxItem BorderThickness="0">
                         <Button BorderThickness="0" Background="{x:Null}">
                             <Button.Resources>

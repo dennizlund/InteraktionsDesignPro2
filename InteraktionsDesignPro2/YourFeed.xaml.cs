@@ -17,9 +17,9 @@ namespace InteraktionsDesignPro2
     /// <summary>
     /// Interaction logic for Publisher.xaml
     /// </summary>
-    public partial class Publisher : Window
+    public partial class YourFeed : Window
     {
-        public Publisher()
+        public YourFeed()
         {
             InitializeComponent();
 
@@ -39,6 +39,14 @@ namespace InteraktionsDesignPro2
         {
             var newForm = new Search(); //create your new form.
             newForm.SökText.Text = SökTexten.Text;
+            newForm.Show(); //show the new form.
+
+            this.Close(); //only if you want to close the current form.
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var newForm = new Publish(); //create your new form.
             newForm.Show(); //show the new form.
 
             this.Close(); //only if you want to close the current form.
