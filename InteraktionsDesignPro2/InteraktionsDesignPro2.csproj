@@ -58,8 +58,8 @@
     <Compile Include="Publish.xaml.cs">
       <DependentUpon>Publish.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Publisher.xaml.cs">
-      <DependentUpon>Publisher.xaml</DependentUpon>
+    <Compile Include="YourFeed.xaml.cs">
+      <DependentUpon>YourFeed.xaml</DependentUpon>
     </Compile>
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
@@ -83,7 +83,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Publisher.xaml">
+    <Page Include="YourFeed.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
